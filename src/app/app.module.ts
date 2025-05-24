@@ -5,10 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
-import { LandingPageComponent } from './components/header/landing-page/landing-page.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { MatDialogModule} from '@angular/material/dialog';
 import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -17,8 +18,8 @@ import { ConfirmationDialogComponent } from './components/confirmation-dialog/co
     HeaderComponent,
     LandingPageComponent,
     ProductFormComponent,
+    ConfirmationDialogComponent,
     
-    ConfirmationDialogComponent
   ],
   imports: [
     BrowserModule,
