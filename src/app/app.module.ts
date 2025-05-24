@@ -10,6 +10,9 @@ import { ProductFormComponent } from './components/product-form/product-form.com
 import { MatDialogModule} from '@angular/material/dialog';
 import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 import { RouterModule } from '@angular/router';
+import { OrderComponent } from './components/order/order.component';
+import { SaleComponent } from './components/sale/sale.component';
+import { ClientComponent } from './components/client/client.component';
 
 
 @NgModule({
@@ -19,6 +22,9 @@ import { RouterModule } from '@angular/router';
     LandingPageComponent,
     ProductFormComponent,
     ConfirmationDialogComponent,
+    OrderComponent,
+    SaleComponent,
+    ClientComponent,
     
   ],
   imports: [

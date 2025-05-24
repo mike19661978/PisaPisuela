@@ -1,0 +1,35 @@
+<form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputId">ID</label>
+      <input type="text" class="form-control" id="inputId" placeholder="Ej: PED001">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputCliente">Cliente</label>
+      <input type="text" class="form-control" id="inputCliente" placeholder="Nombre del cliente">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="inputFechaPedido">Fecha de Pedido</label>
+      <input type="date" class="form-control" id="inputFechaPedido">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputSena">Seña ($)</label>
+      <input type="number" class="form-control" id="inputSena" placeholder="Monto de la seña" step="0.01" min="0">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputEstado">Estado</label>
+      <select id="inputEstado" class="form-control">
+        <option selected>Selecciona...</option>
+        <option>Pendiente</option>
+        <option>En proceso</option>
+        <option>Completado</option>
+        <option>Cancelado</option>
+      </select>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Guardar Pedido</button>
+</form>
