@@ -1,0 +1,37 @@
+{"clientes": [
+    {
+      "id": "cli-001",
+      "nombre": "Juan",
+      "apellido": "Pérez",
+      "celular": "555-1234567"
+    },
+    {
+      "id": "cli-002",
+      "nombre": "María",
+      "apellido": "Gómez",
+      "celular": "555-7654321"
+    }
+  ],
+    "productos": [
+      {
+        "id": "prod-001",
+        "idtipoDeProducto": "tipo-1",
+        "idtalle": "talle-m",
+        "idcolor": "color-azul",
+        "idcolegio": "colegio-1",
+        "idtipoDeTela": "tela-algodon",
+        "cantidadEnStock": 50,
+        "precioUnitario": 25.99
+      },
+      {
+        "id": "prod-002",
+        "idtipoDeProducto": "tipo-2",
+        "idtalle": "talle-l",
+        "idcolor": "color-blanco",
+        "idcolegio": "colegio-2",
+        "idtipoDeTela": "tela-poliéster",
+        "cantidadEnStock": 30,
+        "precioUnitario": 30.50
+      }
+    ]
+  }
