@@ -1,37 +1,116 @@
-{"clientes": [
+{
+  "clientes": [
     {
-      "id": "cli-001",
-      "nombre": "Juan",
-      "apellido": "Pérez",
-      "celular": "555-1234567"
+      "id": "cli001",
+      "nombre": "Lucía",
+      "apellido": "Martínez",
+      "celular": "1123456789"
     },
     {
-      "id": "cli-002",
-      "nombre": "María",
-      "apellido": "Gómez",
-      "celular": "555-7654321"
+      "id": "cli002",
+      "nombre": "Mateo",
+      "apellido": "González",
+      "celular": "1134567890"
+    },
+    {
+      "id": "cli003",
+      "nombre": "Sofía",
+      "apellido": "López",
+      "celular": "1145678901"
     }
   ],
-    "productos": [
-      {
-        "id": "prod-001",
-        "idtipoDeProducto": "tipo-1",
-        "idtalle": "talle-m",
-        "idcolor": "color-azul",
-        "idcolegio": "colegio-1",
-        "idtipoDeTela": "tela-algodon",
-        "cantidadEnStock": 50,
-        "precioUnitario": 25.99
-      },
-      {
-        "id": "prod-002",
-        "idtipoDeProducto": "tipo-2",
-        "idtalle": "talle-l",
-        "idcolor": "color-blanco",
-        "idcolegio": "colegio-2",
-        "idtipoDeTela": "tela-poliéster",
-        "cantidadEnStock": 30,
-        "precioUnitario": 30.50
-      }
-    ]
-  }
+  "productos": [
+    {
+      "id": "prod001",
+      "idtipoDeProducto": "tp001",
+      "idtalle": "t001",
+      "idcolor": "c001",
+      "idcolegio": "col001",
+      "idtipoDeTela": "tt001",
+      "cantidadEnStock": 20,
+      "precioUnitario": 4500
+    },
+    {
+      "id": "prod002",
+      "idtipoDeProducto": "tp002",
+      "idtalle": "t002",
+      "idcolor": "c002",
+      "idcolegio": "col002",
+      "idtipoDeTela": "tt002",
+      "cantidadEnStock": 15,
+      "precioUnitario": 3900
+    },
+    {
+      "id": "prod003",
+      "idtipoDeProducto": "tp003",
+      "idtalle": "t003",
+      "idcolor": "c003",
+      "idcolegio": "col001",
+      "idtipoDeTela": "tt001",
+      "cantidadEnStock": 10,
+      "precioUnitario": 5100
+    }
+  ],
+  "pedidos": [
+    {
+      "id": "ped001",
+      "cliente": "cli001",
+      "fechaPedido": "2025-06-10",
+      "seña": 1000,
+      "estado": "pendiente"
+    },
+    {
+      "id": "ped002",
+      "cliente": "cli002",
+      "fechaPedido": "2025-06-11",
+      "seña": 2000,
+      "estado": "confirmado"
+    },
+    {
+      "id": "ped003",
+      "cliente": "cli003",
+      "fechaPedido": "2025-06-12",
+      "seña": 1500,
+      "estado": "entregado"
+    }
+  ],
+  "ventas": [
+    {
+      "id": "ven001",
+      "cliente": "cli001",
+      "formaDePago": "efectivo",
+      "fechaVenta": "2025-06-14",
+      "totalVenta": 9000
+    },
+    {
+      "id": "ven002",
+      "cliente": "cli002",
+      "formaDePago": "tarjeta",
+      "fechaVenta": "2025-06-15",
+      "totalVenta": 7800
+    }
+  ],
+  "tiposDeProducto": [
+    { "id": "tp001", "nombre": "Chomba" },
+    { "id": "tp002", "nombre": "Pantalón" },
+    { "id": "tp003", "nombre": "Campera" }
+  ],
+  "talles": [
+    { "id": "t001", "nombre": "S" },
+    { "id": "t002", "nombre": "M" },
+    { "id": "t003", "nombre": "L" }
+  ],
+  "colores": [
+    { "id": "c001", "nombre": "Azul Marino" },
+    { "id": "c002", "nombre": "Gris" },
+    { "id": "c003", "nombre": "Negro" }
+  ],
+  "colegios": [
+    { "id": "col001", "nombre": "Escuela Nº 5" },
+    { "id": "col002", "nombre": "Instituto San José" }
+  ],
+  "tiposDeTela": [
+    { "id": "tt001", "nombre": "Algodón" },
+    { "id": "tt002", "nombre": "Poliéster" }
+  ]
+}
