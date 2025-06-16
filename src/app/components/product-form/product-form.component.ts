@@ -11,15 +11,21 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ProductFormComponent {
 
-  successMessage: boolean=false;
+ successMessage: boolean=true;
   productForm: FormGroup;
-  
-constructor
-(private fb: FormBuilder,
 
-private productService: ProductosService,
-private router: Router){
-this.productForm= this.fb.group({
+    tiposDeProducto: any[] = [];
+    talles: any[] = [];
+    colores: any[] = [];
+    colegios: any[] = [];
+    tiposDeTela: any[] = [];
+
+  
+    constructor(private fb: FormBuilder,
+      private productService: ProductosService,
+      private router: Router)
+      {
+        this.productForm= this.fb.group({
       id: ['', Validators.required],
       idtipoDeProducto: ['',Validators.required],
       idTalle: ['',Validators.required],
@@ -30,31 +36,44 @@ this.productForm= this.fb.group({
       precioUnitario: ['',Validators.required],
   
     });}
-    ngOnInit(): void{
-       }
-       onSubmit(): void{
-    if(this.productForm.valid){
-      this.productService.createProduct(this.productForm.value).subscribe(
-        (productCreated) => {
-          if(productCreated){
-            this.successMessage = true;
-            this.productForm.reset();
-            setTimeout(() => (this.successMessage = false), 3000);
-            this.router.navigate(['/loans/add']);
-          } else {
-            throw new Error('Error desconocido al crear producto');
-          }
-        },
-        (error) => console.error('Error al añadir el producto:', error)
-      );
 
-    }else {
-      console.log('El formulario es inválido');
-    }
+    ngOnInit(): void {
+      this.productService.getTiposDeProducto().subscribe(data => this.tiposDeProducto = data);
+      this.productService.getTalles().subscribe(data => this.talles = data);
+      this.productService.getColores().subscribe(data => this.colores = data);
+      this.productService.getColegios().subscribe(data => this.colegios = data);
+      this.productService.getTiposDeTela().subscribe(data => this.tiposDeTela = data);
+  }
+
+ onSubmit(): void {
+  if (this.productForm.valid) {
+    const formValue = this.productForm.value;
+
+    const productoConIds = {
+      id: formValue.id,
+      idtipoDeProducto: formValue.idtipoDeProducto,
+      idtalle: formValue.idTalle,
+      idcolor: formValue.idColor,
+      idcolegio: formValue.idColegio,
+      idtipoDeTela: formValue.idtipoDeTela,
+      cantidadEnStock: formValue.cantidadEnStock,
+      precioUnitario: formValue.precioUnitario
+    };
+
+    this.productService.createProduct(productoConIds).subscribe(
+      (productCreated) => {
+        if (productCreated) {
+          this.successMessage = true;
+          this.productForm.reset();
+          setTimeout(() => (this.successMessage = false), 3000);
+        } else {
+          throw new Error('Error desconocido al crear producto');
+        }
+      },
+      (error) => console.error('Error al añadir el producto:', error)
+    );
+  } else {
+    console.log('El formulario es inválido');
   }
 }
-
-
-
-
-
+}

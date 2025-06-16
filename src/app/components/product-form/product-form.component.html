@@ -1,20 +1,18 @@
 <div class="d-flex justify-content-center align-items-center vh-100 bg-light">
   <div class="border rounded shadow p-4 bg-white" style="width: 100%; max-width: 600px;">
-    <form (ngSubmit)="onSubmit()" [formGroup] ="productForm">
+    <form (ngSubmit)="onSubmit()" [formGroup] ="productForm" novalidate>
       <h4 class="mb-4 text-center">Formulario de Producto</h4>
       
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputNumero">Número / ID</label>
-          <input type="text" class="form-control" id="inputNumero" placeholder="Ej: 001">
+          <input type="text" class="form-control" id="inputNumero"formControlName="id" placeholder="Ej: 001">
         </div>
         <div class="form-group col-md-6">
           <label for="inputTipoProducto">Tipo de Producto</label>
-          <select id="inputTipoProducto" class="form-control">
+          <select id="inputTipoProducto" class="form-control" formControlName="idtipoDeProducto">
             <option selected>Selecciona...</option>
-            <option>Camisa</option>
-            <option>Pantalón</option>
-            <option>Chomba</option>
+            <option *ngFor="let tipo of tiposDeProducto" [value]="tipo.id">{{ tipo.nombre }}</option>
           </select>
         </div>
       </div>
@@ -22,31 +20,23 @@
       <div class="form-row">
         <div class="form-group col-md-4">
           <label for="inputTalle">Talle</label>
-          <select id="inputTalle" class="form-control">
+          <select id="inputTalle" class="form-control" formControlName="idTalle">
             <option selected>Selecciona...</option>
-            <option>XS</option>
-            <option>S</option>
-            <option>M</option>
-            <option>L</option>
-            <option>XL</option>
+            <option *ngFor="let talle of talles" [value]="talle.id">{{ talle.nombre }}</option>
           </select>
         </div>
         <div class="form-group col-md-4">
           <label for="inputColor">Color</label>
-          <select id="inputColor" class="form-control">
+          <select id="inputColor" class="form-control" formControlName="idColor" >
             <option selected>Selecciona...</option>
-            <option>Blanco</option>
-            <option>Azul</option>
-            <option>Gris</option>
+            <option *ngFor="let color of colores" [value]="color.id">{{ color.nombre }}</option>
           </select>
         </div>
         <div class="form-group col-md-4">
           <label for="inputColegio">Colegio</label>
-          <select id="inputColegio" class="form-control">
+          <select id="inputColegio" class="form-control" formControlName="idColegio">
             <option selected>Selecciona...</option>
-            <option>Colegio A</option>
-            <option>Colegio B</option>
-            <option>Colegio C</option>
+            <option *ngFor="let colegio of colegios" [value]="colegio.id">{{ colegio.nombre }}</option>
           </select>
         </div>
       </div>
@@ -54,29 +44,25 @@
       <div class="form-row">
         <div class="form-group col-md-4">
           <label for="inputTela">Tipo de Tela</label>
-          <select id="inputTela" class="form-control">
+          <select id="inputTela" class="form-control" formControlName="idtipoDeTela">
             <option selected>Selecciona...</option>
-            <option>Algodón</option>
-            <option>Poliéster</option>
-            <option>Mezcla</option>
+              <option *ngFor="let tela of tiposDeTela" [value]="tela.id">{{ tela.nombre }}</option>
           </select>
         </div>
         <div class="form-group col-md-4">
           <label for="inputStock">Cantidad en Stock</label>
-          <input type="number" class="form-control" id="inputStock" placeholder="Ej: 25" min="0">
+          <input type="number" class="form-control" id="inputStock" formControlName="cantidadEnStock" placeholder="Ej: 25" min="0">
         </div>
         <div class="form-group col-md-4">
           <label for="inputPrecio">Precio Unitario</label>
-          <input type="number" class="form-control" id="inputPrecio" placeholder="Ej: 1500" step="0.01" min="0">
+          <input type="number" class="form-control" id="inputPrecio" formControlName="precioUnitario" placeholder="Ej: 1500" step="0.01" min="0">
         </div>
       </div>
 
       <div class="text-center">
-        <button type="submit" class="btn btn-primary mt-3" [disabled]="productForm.invalid">Cargar Producto</button>
+        <button type="submit" class="btn btn-primary mt-3">Cargar Producto</button>
       </div>
     </form>
-    <div *ngIf="successMessage" class="success-message">
-        Producto creado con éxito.
-      </div>
+    
   </div>
 </div>

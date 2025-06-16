@@ -19,38 +19,6 @@
       "celular": "1145678901"
     }
   ],
-  "productos": [
-    {
-      "id": "prod001",
-      "idtipoDeProducto": "tp001",
-      "idtalle": "t001",
-      "idcolor": "c001",
-      "idcolegio": "col001",
-      "idtipoDeTela": "tt001",
-      "cantidadEnStock": 20,
-      "precioUnitario": 4500
-    },
-    {
-      "id": "prod002",
-      "idtipoDeProducto": "tp002",
-      "idtalle": "t002",
-      "idcolor": "c002",
-      "idcolegio": "col002",
-      "idtipoDeTela": "tt002",
-      "cantidadEnStock": 15,
-      "precioUnitario": 3900
-    },
-    {
-      "id": "prod003",
-      "idtipoDeProducto": "tp003",
-      "idtalle": "t003",
-      "idcolor": "c003",
-      "idcolegio": "col001",
-      "idtipoDeTela": "tt001",
-      "cantidadEnStock": 10,
-      "precioUnitario": 5100
-    }
-  ],
   "pedidos": [
     {
       "id": "ped001",
@@ -90,27 +58,108 @@
       "totalVenta": 7800
     }
   ],
+  "productos": [
+    {
+      "id": "prod001",
+      "idtipoDeProducto": "tp001",
+      "idtalle": "t001",
+      "idcolor": "c001",
+      "idcolegio": "col001",
+      "idtipoDeTela": "tt001",
+      "cantidadEnStock": 20,
+      "precioUnitario": 4500
+    },
+    {
+      "id": "prod002",
+      "idtipoDeProducto": "tp002",
+      "idtalle": "t002",
+      "idcolor": "c002",
+      "idcolegio": "col002",
+      "idtipoDeTela": "tt002",
+      "cantidadEnStock": 15,
+      "precioUnitario": 3900
+    },
+    {
+      "id": "prod003",
+      "idtipoDeProducto": "tp003",
+      "idtalle": "t003",
+      "idcolor": "c003",
+      "idcolegio": "col001",
+      "idtipoDeTela": "tt001",
+      "cantidadEnStock": 10,
+      "precioUnitario": 5100
+    },
+    {
+      "id": "Test",
+      "idtipoDeProducto": "tp002",
+      "idtalle": "t002",
+      "idcolor": "c001",
+      "idcolegio": "col001",
+      "idtipoDeTela": "tt002",
+      "cantidadEnStock": 25,
+      "precioUnitario": 1200
+    }
+  ],
   "tiposDeProducto": [
-    { "id": "tp001", "nombre": "Chomba" },
-    { "id": "tp002", "nombre": "Pantalón" },
-    { "id": "tp003", "nombre": "Campera" }
+    {
+      "id": "tp001",
+      "nombre": "Chomba"
+    },
+    {
+      "id": "tp002",
+      "nombre": "Pantalón"
+    },
+    {
+      "id": "tp003",
+      "nombre": "Campera"
+    }
   ],
   "talles": [
-    { "id": "t001", "nombre": "S" },
-    { "id": "t002", "nombre": "M" },
-    { "id": "t003", "nombre": "L" }
+    {
+      "id": "t001",
+      "nombre": "S"
+    },
+    {
+      "id": "t002",
+      "nombre": "M"
+    },
+    {
+      "id": "t003",
+      "nombre": "L"
+    }
   ],
   "colores": [
-    { "id": "c001", "nombre": "Azul Marino" },
-    { "id": "c002", "nombre": "Gris" },
-    { "id": "c003", "nombre": "Negro" }
+    {
+      "id": "c001",
+      "nombre": "Azul Marino"
+    },
+    {
+      "id": "c002",
+      "nombre": "Gris"
+    },
+    {
+      "id": "c003",
+      "nombre": "Negro"
+    }
   ],
   "colegios": [
-    { "id": "col001", "nombre": "Escuela Nº 5" },
-    { "id": "col002", "nombre": "Instituto San José" }
+    {
+      "id": "col001",
+      "nombre": "Escuela Nº 5"
+    },
+    {
+      "id": "col002",
+      "nombre": "Instituto San José"
+    }
   ],
   "tiposDeTela": [
-    { "id": "tt001", "nombre": "Algodón" },
-    { "id": "tt002", "nombre": "Poliéster" }
+    {
+      "id": "tt001",
+      "nombre": "Algodón"
+    },
+    {
+      "id": "tt002",
+      "nombre": "Poliéster"
+    }
   ]
 }
