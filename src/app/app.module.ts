@@ -13,6 +13,7 @@ import { RouterModule } from '@angular/router';
 import { OrderComponent } from './components/order/order.component';
 import { SaleComponent } from './components/sale/sale.component';
 import { ClientComponent } from './components/client/client.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { ClientComponent } from './components/client/client.component';
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     MatDialogModule,
     HttpClientModule
