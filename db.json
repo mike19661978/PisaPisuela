@@ -62,11 +62,11 @@
     {
       "id": "prod001",
       "idtipoDeProducto": "tp001",
-      "idtalle": "t001",
+      "idtalle": "t002",
       "idcolor": "c001",
       "idcolegio": "col001",
       "idtipoDeTela": "tt001",
-      "cantidadEnStock": 20,
+      "cantidadEnStock": 21,
       "precioUnitario": 4500
     },
     {
@@ -90,14 +90,14 @@
       "precioUnitario": 5100
     },
     {
-      "id": "Test",
-      "idtipoDeProducto": "tp002",
+      "id": "prod004",
+      "idtipoDeProducto": "tp001",
       "idtalle": "t002",
-      "idcolor": "c001",
+      "idcolor": "c002",
       "idcolegio": "col001",
-      "idtipoDeTela": "tt002",
-      "cantidadEnStock": 25,
-      "precioUnitario": 1200
+      "idtipoDeTela": "tt001",
+      "cantidadEnStock": 26,
+      "precioUnitario": 1800
     }
   ],
   "tiposDeProducto": [

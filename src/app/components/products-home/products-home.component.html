@@ -1,0 +1,30 @@
+<div class="container py-5">
+  <h2 class="text-center mb-4">Gestión de Productos</h2>
+
+  <div class="row justify-content-center">
+    <!-- Ver productos -->
+    <div class="col-md-4 mb-3">
+      <div class="card h-100 shadow text-center">
+        <div class="card-body">
+          <i class="bi bi-box-seam display-4 text-primary mb-3"></i>
+          <h5 class="card-title">Ver Productos</h5>
+          <p class="card-text">Visualizá todos los productos cargados en el sistema.</p>
+          <button class="btn btn-primary" (click)="navegarA('/products/view')">Ir</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Agregar producto -->
+    <div class="col-md-4 mb-3">
+      <div class="card h-100 shadow text-center">
+        <div class="card-body">
+          <i class="bi bi-plus-circle display-4 text-success mb-3"></i>
+          <h5 class="card-title">Agregar Producto</h5>
+          <p class="card-text">Cargá un nuevo producto al inventario.</p>
+          <button class="btn btn-success" (click)="navegarA('/products/add')">Agregar</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

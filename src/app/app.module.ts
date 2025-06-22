@@ -14,6 +14,10 @@ import { OrderComponent } from './components/order/order.component';
 import { SaleComponent } from './components/sale/sale.component';
 import { ClientComponent } from './components/client/client.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProductViewComponent } from './product-view/product-view.component';
+import { ProductEditComponent } from './components/product-edit/product-edit.component';
+import { ProductsHomeComponent } from './components/products-home/products-home.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -26,6 +30,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     OrderComponent,
     SaleComponent,
     ClientComponent,
+    ProductViewComponent,
+    ProductEditComponent,
+    ProductsHomeComponent,
     
   ],
   imports: [
@@ -33,6 +40,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     AppRoutingModule,
     MatDialogModule,
+    FormsModule,
     HttpClientModule
     
   ],

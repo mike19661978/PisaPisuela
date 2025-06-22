@@ -1,0 +1,90 @@
+<div class="container my-4">
+  <h2 class="text-center mb-4">Lista de Productos</h2>
+
+   <!-- Filtros -->
+  <div class="row mb-3">
+    <div class="col-md-2">
+      <select class="form-control" [(ngModel)]="filtros.tipo" (change)="aplicarFiltro()">
+        <option value="">Tipo</option>
+        <option *ngFor="let tipo of tiposDeProductoList" [value]="tipo.id">{{ tipo.nombre }}</option>
+      </select>
+    </div>
+
+    <div class="col-md-2">
+      <select class="form-control" [(ngModel)]="filtros.talle" (change)="aplicarFiltro()">
+        <option value="">Talle</option>
+        <option *ngFor="let talle of tallesList" [value]="talle.id">{{ talle.nombre }}</option>
+      </select>
+    </div>
+
+    <div class="col-md-2">
+      <select class="form-control" [(ngModel)]="filtros.color" (change)="aplicarFiltro()">
+        <option value="">Color</option>
+        <option *ngFor="let color of coloresList" [value]="color.id">{{ color.nombre }}</option>
+      </select>
+    </div>
+
+    <div class="col-md-3">
+      <select class="form-control" [(ngModel)]="filtros.colegio" (change)="aplicarFiltro()">
+        <option value="">Colegio</option>
+        <option *ngFor="let colegio of colegiosList" [value]="colegio.id">{{ colegio.nombre }}</option>
+      </select>
+    </div>
+
+    <div class="col-md-3">
+      <select class="form-control" [(ngModel)]="filtros.tela" (change)="aplicarFiltro()">
+        <option value="">Tipo de Tela</option>
+        <option *ngFor="let tela of tiposDeTelaList" [value]="tela.id">{{ tela.nombre }}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="text-end mb-2">
+    <button class="btn btn-outline-secondary btn-sm" (click)="limpiarFiltros()">Limpiar Filtros</button>
+  </div>
+
+  <!-- Mensaje de carga -->
+
+  <div *ngIf="productos.length === 0">Cargando productos...</div>
+
+  <div class="table-responsive" *ngIf="productos.length > 0">
+    <table class="table table-bordered table-hover text-center">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Tipo de Producto</th>
+          <th>Talle</th>
+          <th>Color</th>
+          <th>Colegio</th>
+          <th>Tipo de Tela</th>
+          <th>Cantidad en Stock</th>
+          <th>Precio Unitario</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let producto of productosFiltrados">
+          <td>{{ producto.id }}</td>
+          <td>{{ producto.tipoProducto }}</td>
+          <td>{{ producto.talle }}</td>
+          <td>{{ producto.color }}</td>
+          <td>{{ producto.colegio }}</td>
+          <td>{{ producto.tipoTela }}</td>
+          <td>{{ producto.cantidadEnStock }}</td>
+          <td>${{ producto.precioUnitario }}</td>
+          <td>
+      <button class="btn btn-sm btn-primary me-1" (click)="editarProducto(producto.id)">
+        Editar
+      </button>
+      <button class="btn btn-sm btn-danger" (click)="eliminarProducto(producto.id)">
+        Eliminar
+      </button>
+    </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div *ngIf="productosFiltrados.length === 0 && productos.length > 0" class="text-center text-muted">
+    No se encontraron productos con esos filtros.
+  </div>
+</div>
